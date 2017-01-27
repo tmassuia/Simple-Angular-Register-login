@@ -1,0 +1,454 @@
+<!-- INICIA PÁGINA LOGIN 
+
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************ -->
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.cyan-lime.min.css" />     
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+md-icon {
+   color: #ccc;
+}
+
+md-input-container {
+float: center;
+}
+
+
+</style> 
+
+</head>
+<html>
+<body ng-app="BlankApp">
+
+<center> <a layout-align="center center"><img layout="center center" style="max-width: 200px; margin: 20px" src="assets/logo.svg"/></a>
+<p class="md-subhead"> Lorem ipsum dolor sit amet.</p> </center>
+
+  <div>
+    <md-card layout-align="center none" d-whiteframe="{{height}}" flex="96" flex-gt-sm="100" md-theme="default" md-colors="{'background-500': 'background-100'}" style="padding: 20px; margin: 20px">
+
+    <md-headline style="text-align: left;">Por favor entre com seus dados</md-headline>
+      <div layout="column" layout-align="space-around center">
+      </div>
+
+      <div>
+      <md-input-container class="md-block" flex>
+      <!-- Use floating placeholder instead of label -->
+      <input ng-model="user.login" style="text-align: left!important" type="email" placeholder="Login" ng-required="true">
+    </md-input-container>
+      </div>
+            <div>
+      <md-input-container class="md-block" flex>
+            <!-- Use floating placeholder instead of label -->
+            <input ng-model="login.password" type="password" placeholder="Senha" ng-required="true">
+          </md-input-container>
+            </div>
+            <div>
+            <center><img  class="wide" flex="90" flex-gt-sm="10" style="max-width: 100%" src="assets/ad.png"> </div></center>
+
+
+<center>
+      <div >
+        <md-card-actions layout-align="center center">
+        <md-button style="margin: 30px" href="http://www.google.com.br" class="md-raised md-primary">Entrar</md-button>
+        </md-card-actions>
+</div>
+ <md-divider style="margin-bottom: 24px" ng-if="!$last"></md-divider>
+<div 
+      <h3 class="md-body-1">Não possui cadastro?</h3> <md-button class="md-raised">Cadastrar</md-button>
+    </div> </center>
+</div>
+
+
+
+      </body>
+      </html>
+
+</center>
+
+<!-- *** SCRIPTS *** -->
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script type="text/javascript">        
+    angular.module('BlankApp', ['ngMaterial']);
+  </script>
+  
+  
+<script type="text/javascript">
+  angular.module('myApp', ['ngMaterial'])
+
+.config(function($mdThemingProvider) {
+
+  $mdThemingProvider.theme('default')
+    .primaryPalette('yellow')
+    .accentPalette('green')
+    .backgroundPalette('green')
+    .warnPalette('red');
+
+  $mdThemingProvider.theme('secondary')
+    .primaryPalette('gree')
+    .accentPalette('yellow')
+    .backgroundPalette('orange')
+    .warnPalette('red');  
+  
+})
+
+.controller('mainCtrl', function() {
+
+});
+
+</script>
+
+  <!-- ads, fb, twitter, github, analytics -->
+  <script>
+    (function(){
+      var fusoionad_script = document.createElement("script");
+      fusoionad_script.type = "text/javascript";
+      fusoionad_script.async = true;
+      fusoionad_script.id = "_fusionads_js";
+      fusoionad_script.src = "http://cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=callmenickcom";
+      document.getElementById("footer__ad--container").appendChild(fusoionad_script);
+    })();
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=222982931164932&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+    (function(){
+      var gitFork = document.createElement("iframe");
+      gitFork.setAttribute( "src", "http://ghbtns.com/github-btn.html?user=callmenick&repo=Memory&type=fork&count=true" );
+      gitFork.setAttribute( "allowtransparency", "true" );
+      gitFork.setAttribute( "frameborder", "0" );
+      gitFork.setAttribute( "scrolling", "0" );
+      gitFork.style.width = "95px";
+      gitFork.style.height = "20px";
+      document.getElementById("footer__social--icons-github").appendChild(gitFork);
+
+      var gitWatch = document.createElement("iframe");
+      gitWatch.setAttribute( "src", "http://ghbtns.com/github-btn.html?user=callmenick&repo=Memory&type=watch&count=true" );
+      gitWatch.setAttribute( "allowtransparency", "true" );
+      gitWatch.setAttribute( "frameborder", "0" );
+      gitWatch.setAttribute( "scrolling", "0" );
+      gitWatch.style.width = "110px";
+      gitWatch.style.height = "20px";
+      document.getElementById("footer__social--icons-github").appendChild(gitWatch);
+    })();
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34160351-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<!-- INICIA PÁGINA REGISTRO 
+
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************
+************************************************************ -->
+
+    <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.cyan-lime.min.css" />     
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">  
+  <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+md-icon {
+   color: #ccc;
+}
+
+md-headline {
+  text-align: left
+}
+
+</style> 
+
+</head>
+<html>
+<body ng-app="BlankApp">
+
+
+
+<center><a layout-align="center center"><img layout="center center" style="max-width: 200px; margin: 20px" src="assets/logo.svg"/></a>
+<p class="md-subhead"> Lorem ipsum dolor sit amet.</p> </center>
+
+<div float="center">
+
+   <md-card  d-whiteframe="{{height}}" flex="96" flex-gt-sm="100"  style="margin: auto; padding: 20px; margin: 20px">
+
+    <md-headline style="padding-top: 20px" >Informações Básicas</md-headline>
+      <div layout="row" layout-xs="column" layout-align="none"> 
+      <md-input-container class="md-block" flex>
+      <!-- Use floating placeholder instead of label -->
+      
+      <input ng-model="user.email" type="email" placeholder="Nome Completo" ng-required="true">
+    </md-input-container>
+
+<md-input-container class="md-block" flex>
+      <!-- Use floating placeholder instead of label -->
+      <input ng-model="user.email" type="email" placeholder="Email" ng-required="true">
+    </md-input-container>
+      </div>
+      <div>
+      
+    <div layout="row" layout-xs="column"> 
+    <md-input-container flex="100">
+       <label>Gênero</label>
+          <md-select name="type" ng-model="project.type" required>
+            <md-option style="text-align: left" value="mas">Masculino</md-option>
+            <md-option value="fem">Feminino</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+    <md-headline>Data de Nascimento</md-headline>
+
+    <!-- DATA DE NASCIMENTO ALTERNATIVA | PODE SER TROCADA PELA DE BAIXO SE QUISER
+    ******************************************************************************
+
+    <div layout="row" layout-align="space-around center"> 
+      <md-input-container class="md-block" flex>
+      
+      <input ng-model="user.birthday" type="date" placeholder="Data de Nascimento" ng-required="true">
+    </md-input-container>
+    </div> -->
+
+<!-- DATA DE NASCIMENTO PADRÃO | PODE SER TROCADA PELA DE CIMA SE QUISER
+    ******************************************************************************    -->
+
+<div layout="row" layout-align="space-around center">     
+    <md-input-container flex="33">
+       <label>Dia</label>
+          <md-select name="type" placeholder="Dia" ng-model="Dia" required>
+            <md-option value="01">01</md-option>
+            <md-option value="02">02</md-option>
+            <md-option value="03">03</md-option>
+            <md-option value="04">04</md-option>
+            <md-option value="05">05</md-option>
+            <md-option value="06">06</md-option>
+            <md-option value="07">07</md-option>
+            <md-option value="08">08</md-option>
+            <md-option value="09">09</md-option>
+            <md-option value="10">10</md-option>
+            <md-option value="11">11</md-option>
+            <md-option value="12">12</md-option>
+            <md-option value="13">13</md-option>
+            <md-option value="14">14</md-option>
+            <md-option value="15">15</md-option>
+            <md-option value="16">16</md-option>
+            <md-option value="17">17</md-option>
+            <md-option value="18">18</md-option>
+            <md-option value="19">19</md-option>
+            <md-option value="20">20</md-option>
+            <md-option value="21">21</md-option>
+            <md-option value="22">22</md-option>
+            <md-option value="23">23</md-option>
+            <md-option value="24">24</md-option>
+            <md-option value="25">25</md-option>
+            <md-option value="26">26</md-option>
+            <md-option value="27">27</md-option>
+            <md-option value="28">28</md-option>
+            <md-option value="29">29</md-option>
+            <md-option value="30">30</md-option>
+            <md-option value="31">31</md-option>
+          </md-select>
+        </md-input-container>
+      
+      <md-input-container flex>
+          <label>Mês</label>
+          <md-select name="type" placeholder="Mês" ng-model="project.type" required>
+            <md-option value="jan">Janeiro</md-option>
+            <md-option value="fev">Feveiro</md-option>
+            <md-option value="mar">Março</md-option>
+            <md-option value="abr">Abril</md-option>
+            <md-option value="mai">Maio</md-option>
+            <md-option value="jun">Junho</md-option>
+            <md-option value="jul">Julho</md-option>
+            <md-option value="ago">Agosto</md-option>
+            <md-option value="set">Setembro</md-option>
+            <md-option value="out">Outubro</md-option>
+            <md-option value="nov">Novembro</md-option>
+            <md-option value="dez">Dezembro</md-option>
+          </md-select>
+        </md-input-container>
+</div>
+<div layout="row">
+            <md-input-container flex="100">
+              <input ng-model="user.year" type="number" placeholder="Ano" ng-required="true">
+        </md-input-container>
+      
+      </div>
+
+<md-headline style="padding-top: 20px" >Dados de Acesso</md-headline>
+      <div layout="row" layout-xs="column" layout-align="none"> 
+      
+
+
+      <md-input-container class="md-block" flex>
+      <!-- Use floating placeholder instead of label -->
+      
+      <input ng-model="user.user" type="email" placeholder="Usuário" ng-required="true">
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex>
+      <!-- Use floating placeholder instead of label -->
+      
+      <input ng-model="user.password" type="password" placeholder="Senha" ng-required="true">
+    </md-input-container>
+
+        <md-input-container class="md-block" flex>
+      <!-- Use floating placeholder instead of label -->
+      
+      <input style="margin-bottom: 2px!important" ng-model="user.password2" type="password" placeholder="Confirmar Senha" ng-required="true">
+    </md-input-container>
+    
+    </div>
+<center>
+      <div>
+        <md-card-actions layout-align="center center">
+        <md-button style="margin-bottom: 30px" href="http://www.google.com.br" class="md-raised md-primary">Cadastrar</md-button>
+        </md-card-actions>
+</div>
+ <md-divider style="margin-bottom: 24px" ng-if="!$last"></md-divider>
+ 
+<div 
+      <h3 class="md-body-1">Já possui cadastro?</h3> <md-button class="md-raised">Login</md-button>
+    
+    
+    </div> </center>
+</div>
+</body>
+
+</html>
+
+
+
+<!-- *** SCRIPTS *** -->
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script type="text/javascript">        
+    angular.module('BlankApp', ['ngMaterial']);
+  </script>
+  
+  
+<script type="text/javascript">
+  angular.module('myApp', ['ngMaterial'])
+
+.config(function($mdThemingProvider) {
+
+  $mdThemingProvider.theme('default')
+    .primaryPalette('yellow')
+    .accentPalette('green')
+    .backgroundPalette('green')
+    .warnPalette('red');
+
+  $mdThemingProvider.theme('secondary')
+    .primaryPalette('gree')
+    .accentPalette('yellow')
+    .backgroundPalette('orange')
+    .warnPalette('red');  
+  
+})
+
+.controller('mainCtrl', function() {
+
+});
+
+</script>
+
+  <!-- ads, fb, twitter, github, analytics -->
+  <script>
+    (function(){
+      var fusoionad_script = document.createElement("script");
+      fusoionad_script.type = "text/javascript";
+      fusoionad_script.async = true;
+      fusoionad_script.id = "_fusionads_js";
+      fusoionad_script.src = "http://cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=callmenickcom";
+      document.getElementById("footer__ad--container").appendChild(fusoionad_script);
+    })();
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=222982931164932&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+    (function(){
+      var gitFork = document.createElement("iframe");
+      gitFork.setAttribute( "src", "http://ghbtns.com/github-btn.html?user=callmenick&repo=Memory&type=fork&count=true" );
+      gitFork.setAttribute( "allowtransparency", "true" );
+      gitFork.setAttribute( "frameborder", "0" );
+      gitFork.setAttribute( "scrolling", "0" );
+      gitFork.style.width = "95px";
+      gitFork.style.height = "20px";
+      document.getElementById("footer__social--icons-github").appendChild(gitFork);
+
+      var gitWatch = document.createElement("iframe");
+      gitWatch.setAttribute( "src", "http://ghbtns.com/github-btn.html?user=callmenick&repo=Memory&type=watch&count=true" );
+      gitWatch.setAttribute( "allowtransparency", "true" );
+      gitWatch.setAttribute( "frameborder", "0" );
+      gitWatch.setAttribute( "scrolling", "0" );
+      gitWatch.style.width = "110px";
+      gitWatch.style.height = "20px";
+      document.getElementById("footer__social--icons-github").appendChild(gitWatch);
+    })();
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34160351-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
